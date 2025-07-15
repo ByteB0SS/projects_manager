@@ -1,26 +1,69 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdfdfd;
+  --foreground: #f1f1f1;
+  --radius: 7px;
+  --blue-shadow: rgba(0, 37, 250, 0.2); /* mesma cor, 20% opacidade */
+
+  --color-blue-500: #3b82f6;
+  --color-amber-500: #f59e0b;
+  --color-white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body{
+  background-color: var(--background);
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.page-link {
+  border: 1px transparent solid;
+  border-radius: 7px;
+  transition: all 50ms ease-in-out;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+.page-link:hover,
+.page-link.selected {
+  /*border-color: var(--color-blue-500);*/
+  border-radius: 7px;
+  background-color: var(--color-blue-500);
+  color: white;
+}
+
+.page-link:hover{
+  background-color: #0000003b;
+  color: black;
+}
+
+.screen {
+  width: 80%;
+  padding: 20px;
+  background-color: var(--background);
+}
+
+aside.main-aside {
+  background-color: var(--color-white);
+  z-index: 10;
+  box-shadow: 5px 0px 5px -2px var(--blue-shadow);
+  min-width: 322px;
+}
+
+.title {
+  color: var(--color-amber-500);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.create-btn{
+  transition: all ease-in-out 350ms;
+  color: white;
+  font-weight: bold;
+}
+.create-btn:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px var(--blue-shadow);
+  transform: scale(102%);
 }
