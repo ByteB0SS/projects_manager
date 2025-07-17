@@ -1,29 +1,42 @@
 {
-    "projects": [],
-    "projectCategories": [
-        {
-            "id": 1,
-            "categoryName": "Planejamento"
-        },
-        {
-            "id": 2,
-            "categoryName": "Desenvolvimento"
-        },
-        {
-            "id": 3,
-            "categoryName": "Design"
-        },
-        {
-            "id": 4,
-            "categoryName": "Pesquisa"
-        },
-        {
-            "id": 5,
-            "categoryName": "Testes"
-        },
-        {
-            "id": 6,
-            "categoryName": "Manutenção"
-        }
-    ]
+  "projects": [
+    {
+      "id": "1a7d",
+      "projectName": "Teste 1",
+      "projectMoney": 10000,
+      "projectCategory": "Testes"
+    },
+    {
+      "id": "564f",
+      "projectName": "Teste 2",
+      "projectMoney": 923849328,
+      "projectCategory": "Planejamento"
+    }
+  ],
+  "projectCategories": [
+    {
+      "id": "1",
+      "categoryName": "Planejamento"
+    },
+    {
+      "id": "2",
+      "categoryName": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "categoryName": "Design"
+    },
+    {
+      "id": "4",
+      "categoryName": "Pesquisa"
+    },
+    {
+      "id": "5",
+      "categoryName": "Testes"
+    },
+    {
+      "id": "6",
+      "categoryName": "Manutenção"
+    }
+  ]
 }

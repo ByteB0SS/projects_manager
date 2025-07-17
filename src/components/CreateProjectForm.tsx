@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { json } from "stream/consumers"
 
 //Interfaces
 interface category{
@@ -6,9 +7,15 @@ interface category{
     categoryName: string
 }
 
+interface project{
+    projectName: string,
+    projectMoney: number,
+    projectCategory: string
+}
+
 export default function CreateProjectForm(){
     const [projectName, setProjectName] = useState<string>("")
-    const [money, setMoney] = useState<number>()
+    const [money, setMoney] = useState<number>(0)
     const [cat, setCat] = useState<string>("Categoria")
     const [categories, setCategories] = useState<category[]>([])
 
@@ -28,8 +35,19 @@ export default function CreateProjectForm(){
        fetchCategories()
     }, [])     
 
-    function createProject () {
-        
+    async function createProject () {
+        const projectDatas: project = {
+            projectName: projectName,
+            projectMoney: money,
+            projectCategory: cat,
+        }
+        let response = await fetch("http://localhost:8080/projects", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(projectDatas)
+        })
     }
 
     return(
