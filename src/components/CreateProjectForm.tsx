@@ -29,7 +29,7 @@ export default function CreateProjectForm(){
     }, [])     
 
     return(
-        <form id="create-project-id" className="flex flex-col gap-5">
+        <form id="create-project-id-alterado" className="flex flex-col gap-5">
             <legend className="text-1xl font-bold">Criar projecto</legend>
             <input type="text" placeholder="Nome do projecto..." className="px-5 p-2 border-1 rounded-[7px] focus:border-amber-500" value={projectName} onChange={(evt)=> setProjectName(evt.target.value)}/>
             <input type="number" placeholder="Maximo a gastar(Orçamento)..." className="px-5 p-2 border-1 rounded-[7px]  focus:border-amber-500"  value={money} onChange={(evt)=> setMoney(Number(evt.target.value))}/>
