@@ -28,6 +28,10 @@ export default function CreateProjectForm(){
        fetchCategories()
     }, [])     
 
+    function createProject () {
+        
+    }
+
     return(
         <form id="create-project-id-alterado-3" className="flex flex-col gap-5">
             <legend className="text-1xl font-bold">Criar projecto</legend>
@@ -39,7 +43,7 @@ export default function CreateProjectForm(){
                     categories.map((category)=> <option value={category.categoryName} key={category.id}>{category.categoryName}</option>)
                 }
             </select>
-            <button className="create-btn mt-2.5 bg-blue-500 px-5 py-2.5 rounded-[7px] w-[100%]">Criar projecto.</button>
+            <button type="button" className="create-btn mt-2.5 bg-blue-500 px-5 py-2.5 rounded-[7px] w-[100%]"onClick={createProject}>Criar projecto.</button>
         </form>
     )
 }
