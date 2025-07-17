@@ -1,0 +1,29 @@
+{
+    "projects": [],
+    "projectCategories": [
+        {
+            "id": 1,
+            "categoryName": "Planejamento"
+        },
+        {
+            "id": 2,
+            "categoryName": "Desenvolvimento"
+        },
+        {
+            "id": 3,
+            "categoryName": "Design"
+        },
+        {
+            "id": 4,
+            "categoryName": "Pesquisa"
+        },
+        {
+            "id": 5,
+            "categoryName": "Testes"
+        },
+        {
+            "id": 6,
+            "categoryName": "Manutenção"
+        }
+    ]
+}
