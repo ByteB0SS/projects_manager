@@ -38,6 +38,7 @@ export default function NavPages () {
                     <PageLink iconHref="/assets/create_project.svg" pageHref="/UserPages/Projects" pageName="Projectos"/>
                     <PageLink iconHref="/assets/enterprise.svg" pageHref="/UserPages/Enterprise" pageName="Empresa"/>
                     <PageLink iconHref="/assets/contact.svg" pageHref="/UserPages/Contact" pageName="Contactar"/>
+                    <PageLink iconHref="/assets/contact.svg" pageHref="/UserPages/Test" pageName="Testes de dev"/>
                 </ul>
             </nav>
 

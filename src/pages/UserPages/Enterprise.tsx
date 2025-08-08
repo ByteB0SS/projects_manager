@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div className="flex">
         <NavPages></NavPages>
-        <Page addTionalClassName="" title="Empresa">
+        <Page addiTionalClassName="" title="Empresa">
             <div>
                 <p>Conteudo principal da Empresa</p>
             </div>

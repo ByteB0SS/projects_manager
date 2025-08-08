@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div className="flex">
         <NavPages></NavPages>
-        <Page addTionalClassName="" title="Criar projecto">
+        <Page title="Criar projecto">
             <div className="flex flex-col justify-center items-center h-[100%] gap-14">
                 <div className="flex flex-col justify-center items-center" data-aos="fade-right">
                   <h1 className="text-5xl text-blue-500 font-bold">Quer começar  gerenciar seu <span className="text-6xl text-amber-500">projecto?</span></h1>

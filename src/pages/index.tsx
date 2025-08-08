@@ -7,8 +7,8 @@ export default function Contact() {
   return (
     <div className="flex">
         <NavPages></NavPages>
-        <Page addTionalClassName="" title="Home">
-            <div className="flex flex-col justify-center items-center gap-10 h-full">
+        <Page addiTionalClassName="overflow-hidden" title="Home">
+            <div className="flex  flex-col justify-center items-center gap-10 h-full">
                 <div className="flex flex-col justify-center items-center gap-2.5" data-aos="fade-right">
                   <h2 className="text-blue-500 text-5xl font-bold ">Bem-Vindo ao Projects <span className="text-6xl text-amber-500">Mananger</span></h2>
                   <p>Planeje, organize e crie já projectos de maneira eficaz com a nossa app!</p>
@@ -17,7 +17,7 @@ export default function Contact() {
                 </div>
 
                 <div data-aos="flip-left">
-                  <Image src={"/assets/welcome.svg"} alt="welcome image" width={500} height={500}></Image>
+                  <Image src={"/assets/welcome.svg"} alt="welcome image" width={450} height={450}></Image>
                 </div>
             </div>
         </Page>

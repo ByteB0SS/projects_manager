@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
-import { json } from "stream/consumers"
+import { useRouter } from "next/router"
+import toast from "react-hot-toast"
+import schema from "@/utils/validators/initProjectDatas.validator"
 
 //Interfaces
 interface category{
@@ -18,36 +20,70 @@ export default function CreateProjectForm(){
     const [money, setMoney] = useState<number>(0)
     const [cat, setCat] = useState<string>("Categoria")
     const [categories, setCategories] = useState<category[]>([])
+    const router = useRouter()
 
     useEffect(()=> {
+
        async function fetchCategories() {
-        const getCategories = await fetch("http://localhost:8080/projectCategories", {
-            method: "GET",
-            headers: {
-                "content-type": "application/json"
+            try {
+                    const getCategories = await fetch("http://localhost:8080/projectCategories", {
+                        method: "GET",
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    })
+                    console.log(getCategories)
+                    const categoriesAux = await getCategories.json()
+                    setCategories(categoriesAux)
+                
             }
-        })
-
-        const categoriesAux = await getCategories.json()
-        setCategories(categoriesAux)
-       }
-
+            catch {
+                toast.error('Algum erro ao se conectar com o servidor, por favor tente mais tarde.')
+            }
+    }
        fetchCategories()
     }, [])     
 
     async function createProject () {
-        const projectDatas: project = {
-            projectName: projectName,
-            projectMoney: money,
-            projectCategory: cat,
+        try{
+            const projectDatas: project = {
+                projectName: projectName,
+                projectMoney: money,
+                projectCategory: cat,
+            }
+
+            const validateData = schema.validate(projectDatas)
+
+            if(validateData.error){
+                toast.error(validateData.error.details[0].message)
+                return
+            }
+
+            let response = await fetch("http://localhost:8080/projects", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(projectDatas)
+            })
+
+            console.log(response.status)
+
+            if(response.status === 201){
+                toast.success('Projecto criado com sucesso.')
+            }
+            else{
+                toast.error('algo de errado, não sabemos ao certo.')
+                return
+            }
+
+            router.push("/UserPages/Projects")
         }
-        let response = await fetch("http://localhost:8080/projects", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(projectDatas)
-        })
+
+        catch {
+            toast.error('Algum erro ao se conectar com o servidor, por favor tente mais tarde.')
+        }
+        
     }
 
     return(
@@ -56,7 +92,7 @@ export default function CreateProjectForm(){
             <input type="text" placeholder="Nome do projecto..." className="px-5 p-2 border-1 rounded-[7px] focus:border-amber-500" value={projectName} onChange={(evt)=> setProjectName(evt.target.value)}/>
             <input type="number" placeholder="Maximo a gastar(Orçamento)..." className="px-5 p-2 border-1 rounded-[7px]  focus:border-amber-500"  value={money} onChange={(evt)=> setMoney(Number(evt.target.value))}/>
             <select className="p-1 rounded-[7px] border" name="Category" id="Category" value={cat} onChange={(evt)=> setCat(evt.target.value)}>
-                <option value="">Selecione a categoria</option>
+                <option value="" hidden  >Selecione a categoria</option>
                 {
                     categories.map((category)=> <option value={category.categoryName} key={category.id}>{category.categoryName}</option>)
                 }
