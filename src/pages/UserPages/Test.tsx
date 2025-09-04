@@ -1,8 +1,9 @@
 import Page from "@/components/Page";
 import toast from "react-hot-toast";
+import Loader from "@/components/Loader";
 import NavPages from "@/components/NavPages";
 
-export default function () {
+export default function Test () {
     function showToast () {
         toast.success('O lucas foi corniado com sucesso!')
     }
@@ -20,6 +21,7 @@ export default function () {
                             Erro
                         </button>
                     </div>
+                    <Loader></Loader>
                 </div>
             </Page>
         </div>

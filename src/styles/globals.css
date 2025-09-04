@@ -16,12 +16,66 @@
 body{
   background-color: var(--background);
   overflow: hidden;
+  font-size: 1.4rem;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+  text-align: center;
+}
+
+h1.title  {
+  text-align: start;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+p{
+  font-size: 1.6rem;
+}
+
+a{
+  font-size: 1.4rem;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 .page-link {
   border: 1px transparent solid;
   border-radius: 7px;
   transition: all 50ms ease-in-out;
+}
+
+.disappear {
+  display: none;
 }
 
 /* h2{
@@ -103,3 +157,141 @@ aside.main-aside {
 .project_card_actions .btn.edit:hover {
   background-color: rgb(66, 255, 63);
 }
+
+
+.mini-title{
+  font-size: 1rem;
+  width: 5rem;
+  text-align: center;
+}
+
+.btn-blue {
+  color: white;
+  background-color: var(--color-blue-500);
+  border-radius: 0.7rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.4rem 1.5rem;
+}
+
+
+@media (max-width: 650px) {
+  .main-aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid gray;
+    padding: 1.5rem;
+  }
+
+  .main-aside .logo{
+    display: none;
+  }
+
+  #logo-link {
+    width: 3rem;
+    display: block;
+    height: 3rem;
+  }
+
+  .main-content-page{
+    width: 100%;
+    padding-bottom: 12rem;
+  } 
+
+  #createProjectImg{
+    display: none;
+  }
+
+  #create-project{
+    width: 100%;
+    text-align: center;
+  }
+
+  #createProjectDiv{
+    gap: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .main-aside .nav-others {
+    display: none;
+  }
+
+  .project_card{
+    max-width: none;
+    max-height: none;
+    height: 200px;
+    width: 90%;
+  }
+
+  .main-aside .page-link{
+    display: flex;
+    flex-direction: column;
+    width: 8rem;
+    /* min-width: 3rem;    */
+  }
+
+  .main-aside .link-img{
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .main-aside nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    font-size: 1px;
+  }
+
+  .main-aside nav{
+    width: 100%;
+  }
+
+  .main-father{
+    padding-right: 0px;
+  }
+
+  .projects{
+    padding-bottom: 3rem;
+  }
+  
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+p{
+  font-size: 1.2rem;
+}
+
+a{
+  font-size: 1rem;
+}
+}
+

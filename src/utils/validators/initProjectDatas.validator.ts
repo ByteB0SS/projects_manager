@@ -9,7 +9,7 @@ const schema = Joi.object({
     'any.required': 'O campo nome do projecto é obrigatório.'
   }),
 
-  projectMoney: Joi.number().min(0).required().messages({
+  projectMoney: Joi.number().min(0).max(100000000000000).required().messages({
     'number.base': 'O orçamento deve ser um número.',
     'number.min': 'O orçamento deve ser no mínimo {#limit}.',
     'any.required': 'O campo orçamento é obrigatório.'

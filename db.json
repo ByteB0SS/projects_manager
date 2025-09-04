@@ -1,55 +1,13 @@
 {
   "projects": [
     {
-      "id": "1",
-      "projectName": "Sistema de Gestão",
-      "projectMoney": 250000,
+      "id": "efbb",
+      "projectName": "Projecto Principal",
+      "projectMoney": 10000,
       "projectCategory": "Planejamento"
-    },
-    {
-      "id": "2",
-      "projectName": "Aplicativo de Compras",
-      "projectMoney": 500000,
-      "projectCategory": "Desenvolvimento"
-    },
-    {
-      "id": "3",
-      "projectName": "Plataforma de Cursos ",
-      "projectMoney": 350000,
-      "projectCategory": "Design"
-    },
-    {
-      "id": "4",
-      "projectName": "Sistema de Pesquisa",
-      "projectMoney": 200000,
-      "projectCategory": "Pesquisa"
-    },
-    {
-      "id": "5",
-      "projectName": "Ferramenta de Automação",
-      "projectMoney": 800000,
-      "projectCategory": "Testes"
-    },
-    {
-      "id": "6",
-      "projectName": "Monitoramento",
-      "projectMoney": 150000,
-      "projectCategory": "Manutenção"
-    },
-    {
-      "id": "7",
-      "projectName": "Sistema de Gestão Escolar",
-      "projectMoney": 450000,
-      "projectCategory": "Desenvolvimento"
-    },
-    {
-      "id": "8",
-      "projectName": "App de Design Colaborativo",
-      "projectMoney": 300000,
-      "projectCategory": "Design"
     }
-
   ],
+  "services": [],
   "projectCategories": [
     {
       "id": "1",

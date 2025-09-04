@@ -15,8 +15,8 @@ function PageLink(props: PageLinkProps) {
     
     return (
         <li>
-            <Link href={props.pageHref} className={`flex page-link gap-2  p-1.5 ${(router.pathname === props.pageHref ? " selected" : "")}`}>
-                <Image  src={props.iconHref} alt="link page icon" width={24} height={24}></Image>
+            <Link href={props.pageHref} className={`flex page-link gap-2 items-center p-1.5 ${(router.pathname === props.pageHref ? " selected" : "")}`}>
+                <Image className="link-img"  src={props.iconHref} alt="link page icon" width={24} height={24}></Image>
                 <p>{props.pageName}</p>
             </Link>
         </li>
@@ -28,7 +28,7 @@ export default function NavPages () {
         <aside className="main-aside h-screen p-2.5 w-[20%] border-r gap-12 flex flex-col static justify left-0 border-r-zinc-400">
 
             <section className="logo flex flex-col justify-center items-center gap-2.5 text-2xl font-bold">
-                <Image src={'/assets/logo2.png'} alt="Logo da da web site" width={200} height={200}></Image>
+                <Image id="logo" src={'/assets/logo2.png'} alt="Logo da da web site" width={200} height={200}></Image>
                 <h1 className="text-center text-blue-500">Project <span className="text-3xl text-amber-500">Manager</span></h1>
             </section>
 
@@ -38,7 +38,7 @@ export default function NavPages () {
                     <PageLink iconHref="/assets/create_project.svg" pageHref="/UserPages/Projects" pageName="Projectos"/>
                     <PageLink iconHref="/assets/enterprise.svg" pageHref="/UserPages/Enterprise" pageName="Empresa"/>
                     <PageLink iconHref="/assets/contact.svg" pageHref="/UserPages/Contact" pageName="Contactar"/>
-                    <PageLink iconHref="/assets/contact.svg" pageHref="/UserPages/Test" pageName="Testes de dev"/>
+                    {/* <PageLink iconHref="/assets/contact.svg" pageHref="/UserPages/Test" pageName="dev"/> */}
                 </ul>
             </nav>
 

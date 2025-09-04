@@ -3,6 +3,7 @@ import NavPages from "@/components/NavPages";
 import CprojectLink from "@/components/CprojectLink";
 import ProjectCard from "@/components/PorjectCard";
 import { useState, useEffect } from "react";
+import Loader from "@/components/Loader";
 import toast from "react-hot-toast";
 
 interface projectInterface {
@@ -13,9 +14,9 @@ interface projectInterface {
 }
 
 
-export default function Contact() {
+export default function Project() {
   const [projects, setProjects] = useState<projectInterface[]>([])
-
+  const [projectsLoading, setPorjectLoading] = useState<boolean>(true)
   useEffect(()=> {
     try{
       async function main () {
@@ -23,6 +24,10 @@ export default function Contact() {
         const json = await response.json()
         console.log(json)
         
+        setTimeout(()=> {
+          setPorjectLoading(false)
+        }, 1000)
+
         if(!(response.status === 200)){
           toast.error('Um erro ao pegar as informações dos projectos.')
         }
@@ -48,15 +53,18 @@ export default function Contact() {
                   <CprojectLink/>
                 </section>
 
-                <section className="projects flex gap-5 p-2.5 flex-wrap justify-center  max-h-full overflow-y-auto">
+                <section className="projects flex relative gap-5 p-2.5 flex-wrap justify-center w-full ">
                   {
                     projects.length > 0 ? (
                       projects.map((project) => {
                         return (
-                          <ProjectCard proectMoney={project.projectMoney} projectCategory={project.projectCategory} projectId={project.id} projectName={project.projectName} key={project.id}></ProjectCard>
+                          <ProjectCard  proectMoney={project.projectMoney} projectCategory={project.projectCategory} projectId={project.id} projectName={project.projectName} key={project.id}></ProjectCard>
                         )
                       })
-                    ): 'Sem projectos crie um.'
+                    ): <p>Sem projectos</p>
+                  }
+                  {
+                    projectsLoading && <Loader/>
                   }
                 </section>
             </div>

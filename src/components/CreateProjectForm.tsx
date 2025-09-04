@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import toast from "react-hot-toast"
 import schema from "@/utils/validators/initProjectDatas.validator"
+import { projectInterface } from "@/pages/Global"
 
 //Interfaces
 interface category{
@@ -9,11 +10,6 @@ interface category{
     categoryName: string
 }
 
-interface project{
-    projectName: string,
-    projectMoney: number,
-    projectCategory: string
-}
 
 export default function CreateProjectForm(){
     const [projectName, setProjectName] = useState<string>("")
@@ -46,7 +42,7 @@ export default function CreateProjectForm(){
 
     async function createProject () {
         try{
-            const projectDatas: project = {
+            const projectDatas: projectInterface = {
                 projectName: projectName,
                 projectMoney: money,
                 projectCategory: cat,
@@ -59,7 +55,7 @@ export default function CreateProjectForm(){
                 return
             }
 
-            let response = await fetch("http://localhost:8080/projects", {
+            const response = await fetch("http://localhost:8080/projects", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -87,7 +83,7 @@ export default function CreateProjectForm(){
     }
 
     return(
-        <form id="create-project-id-alterado-3" className="flex flex-col gap-5">
+        <form id="create-project" className="flex flex-col gap-5">
             <legend className="text-1xl font-bold">Criar projecto</legend>
             <input type="text" placeholder="Nome do projecto..." className="px-5 p-2 border-1 rounded-[7px] focus:border-amber-500" value={projectName} onChange={(evt)=> setProjectName(evt.target.value)}/>
             <input type="number" placeholder="Maximo a gastar(Orçamento)..." className="px-5 p-2 border-1 rounded-[7px]  focus:border-amber-500"  value={money} onChange={(evt)=> setMoney(Number(evt.target.value))}/>

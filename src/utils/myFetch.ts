@@ -1,4 +1,3 @@
-import toast from "react-hot-toast"
 
 interface myFetchprops {
     endpoint: string
@@ -7,7 +6,7 @@ interface myFetchprops {
 }
 
 export default async function myFetch(props: myFetchprops)  {
-    let option: RequestInit = {
+    const option: RequestInit = {
         method: `${props.fetchType}`,
         headers: {
             'Content-Type': 'application/json'
@@ -22,9 +21,11 @@ export default async function myFetch(props: myFetchprops)  {
     try{
         const response = await fetch(props.endpoint, option)
         const json = await response.json()
+        console.log(json)
     }
     catch (error) {
         const msg = 'Algum erro ao se conectar com o servidor!'
-        //console.log(error)
+        console.log(msg)
+        console.log(error)
     }
 }
