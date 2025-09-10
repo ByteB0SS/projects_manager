@@ -7,7 +7,113 @@
       "projectCategory": "Planejamento"
     }
   ],
-  "services": [],
+  "services": [
+    {
+      "id": "82d392df-49ca-4212-8c3f-0f744c6ef55d",
+      "name": "serviço de teste",
+      "toBeSpent": 1000,
+      "description": "serviço sem nome, estou a fazer atoa mesmo, não sei o que escrever.",
+      "projectId": "efbb"
+    },
+    {
+      "id": "f7bdebe4-a1ac-4b41-af5a-04f0550d2817",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "ad0adb0f-f33f-4525-b42a-f6ae355f66f8",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "3a0f882b-9b80-41bd-b1ce-e7098649bc8e",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "604091d5-fe32-4e11-99f6-a9cb8712bda2",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "b2a71434-5602-4b8f-9e5a-68842b2ef0ae",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "85c9e384-2eed-405b-bb2a-74551154e0a8",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "f3bfa1f3-b8c2-487a-8f2a-6a0d1f8db8e1",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "1e5400cf-6d1a-446a-85ef-d2df7e583b83",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "cc2bfba1-480d-40a3-b746-5457243c146f",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "cd16f729-9b2f-4a8b-8e6d-8edfcee94edc",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "75ca0314-22ed-49c1-a4dc-b9bcec1fd595",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "fd90fe68-5d07-4887-911b-1a642d0aafb5",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "0fe3f2b5-976d-4252-96d4-58abc6389802",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    },
+    {
+      "id": "64db58e9-5f95-4211-a3b7-d6f1f9386020",
+      "name": "serviço 1",
+      "toBeSpent": 1000,
+      "description": "fadkfjdsjfjdflçajdlfkjalkdfsjds",
+      "projectId": "efbb"
+    }
+  ],
   "projectCategories": [
     {
       "id": "1",

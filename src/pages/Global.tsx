@@ -10,7 +10,7 @@ export interface serviceInterface{
     description: string
 }
 
-export default function () {
+export default function Global () {
     <div>
         Apenas pra uso global.
     </div>

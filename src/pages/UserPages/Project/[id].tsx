@@ -53,7 +53,7 @@ export default function Project () {
 
     useEffect(()=> {
         if(!services) return 
-        let totalToSpent = services.reduce((acc, s) => acc + Number(s.toBeSpent), 0)
+        const totalToSpent = services.reduce((acc, s) => acc + Number(s.toBeSpent), 0)
         setTotalUsed(totalToSpent)
         setProjectBudgetAux(projectBudget - totalToSpent)
     }, [services, projectBudget])
